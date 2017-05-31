@@ -58,20 +58,3 @@ def notify(status){
     )
 }
 
-
-
-
-
-
-
-
-
-def notify(status){
-    emailext (
-      to: "wesmdemos@gmail.com",
->>>>>>> 57f1ed0b1a1f44509550a822835f700d35892260
-      subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-      body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
-        <p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
-    )
-}
